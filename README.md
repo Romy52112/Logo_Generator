@@ -1,6 +1,7 @@
  ## Project Title 
   LOGO GENERATOR
-  ![alt text](<module 10.png>)
+ ## Screeshot
+ ![alt text](<module 10.png>)
   ## License
    
   ## Description
@@ -15,7 +16,7 @@
   npm install
   ## How to Use This Application:
   You have to type in your terminal the "node index.js" to run it.
-  [text](<../../Downloads/module 10 Challenge.webm>)
+  https://drive.google.com/file/d/1jQr6h0ha2_680BIKIGBX6vAfjpHp7JE1/view
   ## Contributors
   none
   ## Testing
