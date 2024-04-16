@@ -5,6 +5,17 @@ const Svg = require('./Lib/svg')
 
 inquirer.prompt([
     {
+        type: 'input',
+        name: 'text',
+        message: 'What text do you want for your logo?',
+        validate: text => text.length <=3 || "Not more than three characters"
+    },
+    {
+        type: 'input',
+        name: 'fontcolor',
+        message: 'What color do you want for your text? '
+    }, 
+    {
         type: 'list',
         name: 'shape',
         message: 'Select a shape for your logo',
@@ -14,17 +25,6 @@ inquirer.prompt([
         type: 'input',
         name: 'color',
         message: 'What color do you want for your logo? '
-    }, 
-    {
-        type: 'input',
-        name: 'text',
-        message: 'What text do you want for your logo?',
-        validate: text => text.length <=3 || "Not more than three characters"
-    }, 
-    {
-        type: 'input',
-        name: 'fontcolor',
-        message: 'What color do you want for your text? '
     }, 
 ])
 
@@ -40,6 +40,6 @@ inquirer.prompt([
     svg.setShape(shape)
     fs.writeFile('logo.svg', svg.render(), err =>{
         if(err)console.log(err)
-        else console.log('log created')
+        else console.log('Generated logo.svg')
     })
 })
